@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './bookTable.css';
 import { UncontrolledPopover, PopoverBody } from 'reactstrap'
 import { Rating } from '@smastrom/react-rating'
@@ -6,6 +6,7 @@ import '@smastrom/react-rating/style.css'
 import { useAuth } from '../Auth';
 
 const BookTable = ({ books }) => {
+
 
     const { currentUser } = useAuth();
 
@@ -41,6 +42,30 @@ const BookTable = ({ books }) => {
           })
     }
 
+    //make endpoint for this from getrating service
+    //propagate to rtable
+    function getRating(bookID, userID) {
+        const url = new URL("http://localhost:8000/getRating");
+        url.searchParams.append("uid", userID);
+        url.searchParams.append("book", bookID);
+        const promise = fetch(url, {
+
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+
+        promise.then((result) => {
+            if (result.status == 200) {
+                console.log(result.body.rating)
+              return result.rating
+            } else {
+              console.log("error")
+            }
+          })
+    }
+
     return (
         <table className="book-table">
             <colgroup>
@@ -65,7 +90,7 @@ const BookTable = ({ books }) => {
                         <td>{book.title}</td>
                         <td>{book.author}</td>
                         <td>{book.numPages}</td>
-                        <td>{book.ranking}</td>
+                        <td>{getRating(book._id, currentUser.uid)}</td>
                         <td>
                             <button id={`ratingbutton-${book._id}`} type="button"
                                     onClick={() => { setSelectedBookId(book._id);

@@ -141,6 +141,17 @@ app.get("/getLibCount", async (req, res) => {
   })
 })
 
+app.get("/getRating", async (req, res) => {
+  const uid = req.query.uid
+  const bookID = req.query.book
+
+  let promise = ratingServices.getRating(uid, bookID)
+  promise.then((result) => {
+    console.log(result)
+    res.status(200).json(result)
+  })
+})
+
 app.get("/getLibPages", async (req, res) => {
   const uid = req.query.uid;
   let count = userServices.getCountTotalPages(uid);
