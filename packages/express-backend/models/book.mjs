@@ -16,7 +16,7 @@ const BookSchema = new mongoose.Schema(
         type: Number,
         required: true
     },
-    avgRating: {
+    ranking: {
         type: Number,
         required: false
     },
@@ -25,7 +25,7 @@ const BookSchema = new mongoose.Schema(
       required: false
   },
   },
-  { collection: "book_list" }
+  { collection: "book_list_new" }
 );
 
 const Book = mongoose.model("Book", BookSchema);
