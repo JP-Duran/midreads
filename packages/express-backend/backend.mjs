@@ -50,7 +50,7 @@ app.get("/login", async (req, res) => {
 
 app.post("/addBook", async (req, res) => {
   const book = req.body;
-  console.log(req);
+  console.log(book);
   let promise = bookServices.addBook(book);
   promise.then((newBook) => {
     if (newBook === undefined) {
@@ -154,18 +154,18 @@ app.get("/getBio", async (req, res) => {
 app.post("/rateBook", async (req, res) => {
   const rating = req.body;
   console.log(req);
-  let promise = ratingServices.addRating(rating);
-  promise.then((newRating) => {
-    let libPromise = userServices.updateLibrary(newRating.by, newRating.about);
-    libPromise.then((result) => {
-      if (result === undefined) {
-        res.status(406).send("Book already in library")
-      } else {
+  let promise = userServices.updateLibrary(rating.by, rating.about);
+  promise.then((result) => {
+    if (result === undefined) {
+      res.status(406).send("Book already in library")
+    } else {
+      let ratingPromise = ratingServices.addRating(rating);
+      ratingPromise.then(() => {
         res.status(200).send("Book rating and added to library");
-      }
-    }).catch((error) => {
-      console.log(error);
-    })
+      })
+    }
+  }).catch((error) => {
+    console.log(error);
   });
 });
 

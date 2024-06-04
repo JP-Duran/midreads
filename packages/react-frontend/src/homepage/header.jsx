@@ -6,7 +6,7 @@ const Header = ({ onSearch }) => {
         title: '',
         author: '',
         numPages: undefined,
-        avgRating: 0,
+        ranking: 0,
         numRatings: 0
     });
 
@@ -51,7 +51,7 @@ const Header = ({ onSearch }) => {
                     title: '',
                     author: '',
                     numPages: undefined,
-                    avgRating: 0,
+                    ranking: 0,
                     numRatings: 0
                 });
                 alert("added");
@@ -63,7 +63,7 @@ const Header = ({ onSearch }) => {
                     title: '',
                     author: '',
                     numPages: undefined,
-                    avgRating: 0,
+                    ranking: 0,
                     numRatings: 0
                 });
                 console.log("error occured adding book");

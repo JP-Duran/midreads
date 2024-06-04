@@ -107,6 +107,7 @@ async function getCountLibrary(uid) {
 async function getCountTotalPages(uid) {
   //let user = await userModel.findOne({ uid: uid});
   let books = await getUserLibrary(uid)
+  console.log(books);
   let pages = books.reduce((sum, book) => sum + book.numPages, 0);
   return pages
 
