@@ -42,7 +42,7 @@ const UserSchema = new mongoose.Schema(
        default: "https: //upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
     }
   },
-  { collection: "users_list" }
+  { collection: "users_list_new" }
 );
 
 const User = mongoose.model("User", UserSchema);
