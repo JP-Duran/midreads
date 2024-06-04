@@ -42,7 +42,7 @@ const UserSchema = new mongoose.Schema(
        default: '../Default_pfp.jpg'
     }
   },
-  { collection: "users_list" }
+  { collection: "users_list_new" }
 );
 
 const User = mongoose.model("User", UserSchema);
