@@ -88,7 +88,7 @@ function CreateAccount() {
         />
       </div>
       <br />
-      {errorMessage && <div className="error-message">{errorMessage}</div>}
+      {errorMessage && <div style={{ color: "maroon" }}>{errorMessage}</div>}
       <br />
       <div>
         <input

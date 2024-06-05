@@ -38,9 +38,10 @@ export async function upload(file, currentUser, setLoading) {
     await updateProfile(currentUser, { photoURL });
 
     setLoading(false);
-    alert("Uploaded file!");
+    //alert("Uploaded file!");
     return photoURL;
   } catch (error) {
+    alert("Error uploading photo! Try again later");
     console.error("Error uploading file:", error);
     setLoading(false);
   }

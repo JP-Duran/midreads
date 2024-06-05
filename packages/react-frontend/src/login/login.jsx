@@ -19,7 +19,13 @@ const Login = (props) => {
       await signInWithEmailAndPassword(auth, username, password);
       navigate("/");
     } catch (err) {
-      setError(err.message);
+      if (err.message == "Firebase: Error (auth/invalid-credential).")
+        setError("Error: No account with this email and password found.");
+      else if (err.message == "Firebase: Error (auth/invalid-email).")
+        setError("Error: Invalid email address");
+      else if (err.message == "Firebase: Error (auth/missing-password).")
+        setError("Error: Please enter your password.");
+      else setError(err.message);
     }
   };
 
@@ -47,6 +53,8 @@ const Login = (props) => {
           className="inputbox"
         />
       </div>
+      <br />
+      {error && <div style={{ color: "maroon" }}>{error}</div>}
       <br />
       <div>
         <input

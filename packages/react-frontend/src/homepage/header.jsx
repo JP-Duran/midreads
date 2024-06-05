@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 const Header = ({ onSearch }) => {
   const [showForm, setShowForm] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
   const [bookData, setBookData] = useState({
     title: "",
     author: "",
@@ -58,8 +59,7 @@ const Header = ({ onSearch }) => {
           ranking: 0,
           numRatings: 0,
         });
-        alert("added");
-        setShowForm(false);
+        setSubmitted(true);
       } else {
         alert("either you entered a bad word, or we already have that book!!!");
         setShowForm(false);
@@ -110,7 +110,18 @@ const Header = ({ onSearch }) => {
               value={bookData.numPages}
               onChange={handleInputChange}
             />
-            <button onClick={handleSubmit}>Submit</button>
+            {submitted && <div style={{ color: "maroon" }}>Book added.</div>}
+            {submitted && (
+              <button
+                onClick={() => {
+                  setShowForm(false);
+                  setSubmitted(false);
+                }}
+              >
+                Close.
+              </button>
+            )}
+            {!submitted && <button onClick={handleSubmit}>Submit.</button>}
           </div>
         </div>
       )}
