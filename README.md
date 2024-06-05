@@ -8,7 +8,11 @@ Midreads is a platform for book lovers. Our customers can use our platform to fi
 
 ### [UI Prototype Link](https://www.figma.com/design/06Grid7QpstABdzwhMFVan/Midreads-Homepage?node-id=0-1&t=2CPF7OGMEoiFyQFE-1)
 
-#### Last updated 12 May 2024
+#### Prototype last updated 12 May 2024
+
+#### _Development environment setup goes here_
+
+### [UML Wiki Page](https://github.com/JP-Duran/midreads/blob/main/docs/uml.md)
 
 ## Contributing
 
