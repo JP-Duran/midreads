@@ -1,47 +1,47 @@
 .book-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    table-layout: fixed;
-    /* Fix the table layout */
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  table-layout: fixed;
+  /* Fix the table layout */
 }
 
 .book-table th,
 .book-table td {
-    text-align: left;
-    padding: 12px;
-    border-bottom: 1px solid #ccc;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #ccc;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .book-table th {
-    background-color: #f9f9f9;
+  background-color: #f9f9f9;
 }
 
 .book-table tr:hover {
-    background-color: #f1f1f1;
+  background-color: #f1f1f1;
 }
 
 .book-table colgroup col.title {
-    width: 28%;
-    /* Adjust this percentage as needed */
+  width: 28%;
+  /* Adjust this percentage as needed */
 }
 
 .book-table colgroup col.author {
-    width: 25%;
+  width: 25%;
 }
 
 .book-table colgroup col.pages {
-    width: 15%;
+  width: 15%;
 }
 
 .book-table colgroup col.rating {
-    width: 12%;
+  width: 12%;
 }
 
 .book-table colgroup col.change-rating {
-    width: 20%;
-    /* Adjust this percentage as needed */
+  width: 20%;
+  /* Adjust this percentage as needed */
 }

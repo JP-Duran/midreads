@@ -18,7 +18,7 @@ body,
 html {
   margin: 0;
   padding: 0;
-  font-family: 'Times New Roman', serif;
+  font-family: "Times New Roman", serif;
   background-color: #f0f0f0;
 }
 
@@ -154,8 +154,8 @@ button:hover {
   flex-direction: column;
 }
 
-.user-details>div,
-.user-details>button {
+.user-details > div,
+.user-details > button {
   margin-bottom: 10px;
 }
 

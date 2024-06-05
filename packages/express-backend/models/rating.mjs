@@ -7,17 +7,17 @@ const RatingSchema = new mongoose.Schema(
     by: {
       type: String,
       ref: "User",
-      required: true
+      required: true,
     },
     about: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Book",
-      required: true
+      required: true,
     },
     rating: {
-        type: Number,
-        required: true
-    }
+      type: Number,
+      required: true,
+    },
   },
   { collection: "ratings_list" }
 );

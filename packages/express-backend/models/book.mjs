@@ -10,20 +10,20 @@ const BookSchema = new mongoose.Schema(
     author: {
       type: String,
       required: true,
-      trim: true
+      trim: true,
     },
     numPages: {
-        type: Number,
-        required: true
+      type: Number,
+      required: true,
     },
     ranking: {
-        type: Number,
-        required: false
+      type: Number,
+      required: false,
     },
     numRatings: {
       type: Number,
-      required: false
-  },
+      required: false,
+    },
   },
   { collection: "book_list_new" }
 );

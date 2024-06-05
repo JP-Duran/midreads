@@ -1,91 +1,91 @@
 .book-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    table-layout: fixed;
-    /* Fix the table layout */
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  table-layout: fixed;
+  /* Fix the table layout */
 }
 
 .book-table th,
 .book-table td {
-    text-align: left;
-    padding: 12px;
-    border-bottom: 1px solid #ccc;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #ccc;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .book-table th {
-    background-color: #f9f9f9;
+  background-color: #f9f9f9;
 }
 
 .book-table tr:hover {
-    background-color: #f1f1f1;
+  background-color: #f1f1f1;
 }
 
 .book-table colgroup col.title {
-    width: 28%;
-    /* Adjust this percentage as needed */
+  width: 28%;
+  /* Adjust this percentage as needed */
 }
 
 .book-table colgroup col.author {
-    width: 25%;
+  width: 25%;
 }
 
 .book-table colgroup col.pages {
-    width: 11%;
+  width: 11%;
 }
 
 .book-table colgroup col.rating {
-    width: 11%;
+  width: 11%;
 }
 
 .book-table colgroup col.predicted-rating {
-    width: 15%;
-    /* Adjust this percentage as needed */
+  width: 15%;
+  /* Adjust this percentage as needed */
 }
 
 .book-table colgroup col.read-later {
-    width: 12%;
-    /* Adjust this percentage as needed */
+  width: 12%;
+  /* Adjust this percentage as needed */
 }
 
 .popover {
-    background-color: #fff;
-    /* border: 2px solid #ddd;
+  background-color: #fff;
+  /* border: 2px solid #ddd;
     border-style: inset; */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    /* padding: 10px; */
-    border-radius: 5px;
-    font-size: 14px;
-  }
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  /* padding: 10px; */
+  border-radius: 5px;
+  font-size: 14px;
+}
 
-  .popover::after {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-width: 10px 10px 0 0;
-    border-style: solid;
-    border-color: #fff transparent transparent transparent;
-  }
+.popover::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10px 10px 0 0;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+}
 
-  .popover-header {
-    padding-bottom: 5px;
-    border-bottom: 1px solid #ddd;
-    font-weight: bold;
-  }
-  
-  .popover .rating {
-    margin-bottom: 20px;
-  }
+.popover-header {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ddd;
+  font-weight: bold;
+}
 
-  .popover .rating + div {
-    text-align: center;
-  }
+.popover .rating {
+  margin-bottom: 20px;
+}
 
-  .popover .rating + div text {
-    color: #c0392b;
-  }
+.popover .rating + div {
+  text-align: center;
+}
+
+.popover .rating + div text {
+  color: #c0392b;
+}

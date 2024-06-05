@@ -1,11 +1,13 @@
 # midreads
 
 ### [Final Presentation Link](https://docs.google.com/presentation/d/1P2gFYvK11ksNucLE_lk21sIDmIObrJyEow4Cefbmijs/edit?usp=sharing)
-  
-### Project Blurb  
-Midreads is a platform for book lovers. Our customers can use our platform to find new books to read, searching from our library of over 10,000 popular titles. Page counts and ratings are included to help our users find what they will love. Users can also add to their 'read later' list, rate books they have read, and add books to their personal library. When you create an account with Midreads, you can customise your profile with a bio and a profile picture, and connect with your friends to view their profiles. We have a simple, clean design, and designed our website to be easy to use and easy to learn. 
+
+### Project Blurb
+
+Midreads is a platform for book lovers. Our customers can use our platform to find new books to read, searching from our library of over 10,000 popular titles. Page counts and ratings are included to help our users find what they will love. Users can also add to their 'read later' list, rate books they have read, and add books to their personal library. When you create an account with Midreads, you can customise your profile with a bio and a profile picture, and connect with your friends to view their profiles. We have a simple, clean design, and designed our website to be easy to use and easy to learn.
 
 ### [UI Prototype Link](https://www.figma.com/design/06Grid7QpstABdzwhMFVan/Midreads-Homepage?node-id=0-1&t=2CPF7OGMEoiFyQFE-1)
+
 #### Last updated 12 May 2024
 
 ## Contributing
@@ -21,6 +23,7 @@ We welcome contributions from our fans. Please follow these guidelines when cont
 ### Style Guide
 
 Please adhere to the following style guides:
+
 - [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
 - [BEM CSS Naming Conventions](http://getbem.com/naming/)
 
@@ -31,35 +34,37 @@ To ensure code quality and consistency, we recommend setting up the following ID
 #### Visual Studio Code
 
 1. **ESLint**: Provides real-time linting for JavaScript/React code.
-    - Install the ESLint plugin from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
-    - Create or update your `.vscode/settings.json` file to include:
-        ```json
-        {
-            "eslint.validate": [
-                "javascript",
-                "javascriptreact",
-                "typescript",
-                "typescriptreact"
-            ],
-            "editor.codeActionsOnSave": {
-                "source.fixAll.eslint": true
-            }
-        }
-        ```
+
+   - Install the ESLint plugin from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
+   - Create or update your `.vscode/settings.json` file to include:
+     ```json
+     {
+       "eslint.validate": [
+         "javascript",
+         "javascriptreact",
+         "typescript",
+         "typescriptreact"
+       ],
+       "editor.codeActionsOnSave": {
+         "source.fixAll.eslint": true
+       }
+     }
+     ```
 
 2. **Prettier**: Ensures consistent code formatting.
-    - Install the Prettier plugin from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode).
-    - Create or update your `.vscode/settings.json` file to include:
-        ```json
-        {
-            "editor.formatOnSave": true,
-            "editor.defaultFormatter": "esbenp.prettier-vscode"
-        }
-        ```
+
+   - Install the Prettier plugin from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode).
+   - Create or update your `.vscode/settings.json` file to include:
+     ```json
+     {
+       "editor.formatOnSave": true,
+       "editor.defaultFormatter": "esbenp.prettier-vscode"
+     }
+     ```
 
 3. **Stylelint**: Lints CSS/Sass/Less.
-    - Install the Stylelint plugin from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint).
-    - Ensure you have a `.stylelintrc` configuration file in your project root.
+   - Install the Stylelint plugin from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint).
+   - Ensure you have a `.stylelintrc` configuration file in your project root.
 
 ### Running Lint and Tests
 
@@ -104,5 +109,4 @@ As a user I want to view other users profiles so I can compare myself to them.
 **Colby Watts**  
 As a user I want to view my own profile so I can see my information.  
 As a security-conscious user I don't want other users to be able to edit my profile so I can maintain my own data.  
-As a disgruntled user I want to delete my own account so I can control my own data.  
-
+As a disgruntled user I want to delete my own account so I can control my own data.
