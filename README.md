@@ -6,8 +6,11 @@
 Midreads is a platform for book lovers. Our customers can use our platform to find new books to read, searching from our library of over 10,000 popular titles. Page counts and ratings are included to help our users find what they will love. Users can also add to their 'read later' list, rate books they have read, and add books to their personal library. When you create an account with Midreads, you can customise your profile with a bio and a profile picture, and connect with your friends to view their profiles. We have a simple, clean design, and designed our website to be easy to use and easy to learn. 
 
 ### [UI Prototype Link](https://www.figma.com/design/06Grid7QpstABdzwhMFVan/Midreads-Homepage?node-id=0-1&t=2CPF7OGMEoiFyQFE-1)
-#### Last updated 12 May 2024
+#### Prototype last updated 12 May 2024
 
+#### _Development environment setup goes here_
+  
+### [UML Wiki Page](https://github.com/JP-Duran/midreads/blob/main/docs/uml.md)
 ## Contributing
 
 We welcome contributions from our fans. Please follow these guidelines when contributing to this project:
