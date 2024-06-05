@@ -3,6 +3,8 @@ import { useAuth } from "../Auth";
 
 const Header = ({ onSearch }) => {
   const [searchTerm, setSearchTerm] = useState("");
+  const [addFriendMessage, setMessage] = useState("");
+  const [showMessage, setShowMessage] = useState(false);
   const { currentUser } = useAuth();
 
   function addFriend() {
@@ -24,9 +26,11 @@ const Header = ({ onSearch }) => {
 
     promise.then((result) => {
       if (result.status === 406) {
-        alert("Error adding friend");
+        setMessage("Error adding friend.");
+        setShowMessage(true);
       } else {
-        alert("Friend successully added");
+        setMessage("Friend successfully added.");
+        setShowMessage(true);
       }
     });
   }
@@ -38,10 +42,18 @@ const Header = ({ onSearch }) => {
         type="text"
         placeholder="Search friends..."
         value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
+        onChange={(e) => {
+          setSearchTerm(e.target.value);
+          setShowMessage(false);
+        }}
         style={{ color: "black" }}
       />
       <button onClick={addFriend}>Add friend</button>
+      {showMessage && (
+        <div style={{ color: "maroon", paddingLeft: "15px" }}>
+          {addFriendMessage}
+        </div>
+      )}
     </div>
   );
 };
