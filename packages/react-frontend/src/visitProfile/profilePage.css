@@ -50,6 +50,18 @@ html {
     margin-bottom: 20px;
 }
 
+.avatar {
+    vertical-align: middle;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border-width: 5px;
+    border-color: black;
+    border-style: outset;
+    margin: 25px;
+    object-fit: cover;
+}
+
 .user-info {
     display: flex;
     flex-direction: column;
@@ -60,7 +72,15 @@ html {
     margin-bottom: 10px;
 }
 
-.back-button {
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    color: #666666;
+}
+
+.edit-button,
+.logout-button,
+.delete-account-button {
     padding: 10px 20px;
     background-color: #000000;
     color: white;
@@ -69,8 +89,9 @@ html {
     cursor: pointer;
 }
 
-
-.back-button:hover {
+.edit-button:hover,
+.logout-button:hover,
+.delete-account-button:hover {
     background-color: #004494;
 }
 
@@ -83,4 +104,6 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    /* Change to column to stack elements vertically */
 }

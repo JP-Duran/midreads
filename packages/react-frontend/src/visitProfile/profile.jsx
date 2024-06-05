@@ -15,13 +15,14 @@ const Profile = () => {
     const [photo, setPhoto] = useState('');
     const location = useLocation();
     const { friend } = location.state || {};
+    const [bio, setBio] = useState("");
 
     useEffect(() => {
         if (currentUser) {
             console.log(currentUser);
             handleCount();
             handlePages();
-            fetchUserPhoto();
+            handleBioInit();
         } else {
             console.log('No user is logged in.');
             navigate("/login");
@@ -33,19 +34,20 @@ const Profile = () => {
         handleRanking();
     }, [pages]);
 
-    const fetchUserPhoto = async () => {
-        try {
-            console.log(`Fetching photo for UID: ${friend.uid}`);
-            const response = await fetch(`http://localhost:8000/api/uploads/getUserPhoto?uid=${friend.uid}`);
-            if (!response.ok) {
-                throw new Error(`Error: ${response.statusText}`);
+    const handleBioInit = () => {
+        const url = new URL("http://localhost:8000/getBio");
+        url.searchParams.append("uid", friend.uid);
+
+        const promise = fetch(url, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
             }
-            const data = await response.json();
-            setPhoto(data.photo);
-        } catch (error) {
-            console.error('Error fetching user photo:', error);
-        }
-    };
+        }).then((response) => response.json())
+        .then((data) => {
+            setBio(data);
+        })
+    }
 
     const handleRanking = () => {
         if (pages <= 500) {
@@ -106,7 +108,7 @@ const Profile = () => {
                     <div className="profile-section">
                         <div className="user-section">
                             <div className="user-photo">
-                                <img src={photo} alt="User Photo" />
+                                <img src={friend.photo} alt="Avatar" className="avatar" />
                             </div>
                             <div className="user-details">
                                 <div className="user-name">User: {friend.userName}</div>
@@ -117,8 +119,7 @@ const Profile = () => {
                             </div>
                         </div>
                         <div className="bio-section">
-                            <div className="user-bio">User Created Bio</div>
-                            <div className="top-rated-books">Top Rated Books</div>
+                            <div className="user-bio">{bio}</div>
                         </div>
                     </div>
                 </div>
