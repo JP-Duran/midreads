@@ -196,9 +196,6 @@ const Profile = () => {
                 <button className="logout-button" onClick={onLogoutClick}>
                   Logout
                 </button>
-                <button className="delete-account-button">
-                  Delete my account
-                </button>
               </div>
             </div>
             <div className="bio-section">
