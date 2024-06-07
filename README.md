@@ -1,16 +1,28 @@
-# midreads
+# Midreads
 
-### [Final Presentation Link](https://docs.google.com/presentation/d/1P2gFYvK11ksNucLE_lk21sIDmIObrJyEow4Cefbmijs/edit?usp=sharing)
+### [Demo Video Link](https://www.youtube.com/watch?v=ClDrU7qEVts)
+
+#### [Final Presentation Link](https://docs.google.com/presentation/d/1P2gFYvK11ksNucLE_lk21sIDmIObrJyEow4Cefbmijs/edit?usp=sharing)
 
 ### Project Blurb
 
-Midreads is a platform for book lovers. Our customers can use our platform to find new books to read, searching from our library of over 10,000 popular titles. Page counts and ratings are included to help our users find what they will love. Users can also add to their 'read later' list, rate books they have read, and add books to their personal library. When you create an account with Midreads, you can customise your profile with a bio and a profile picture, and connect with your friends to view their profiles. We have a simple, clean design, and designed our website to be easy to use and easy to learn.
+Midreads is a platform for book lovers. Our customers can use our platform to find new books to read, searching from our library of over 10,000 popular titles. Page counts and ratings are included to help our users find what they will love. If a book isn't in our system, users can easily add their own books to the database for everyone to see. Users can also add to their 'read later' list, rate books they have read, and add books to their personal library. When you create an account with Midreads, you can customise your profile with a bio and a profile picture, and connect with your friends to view their profiles. We have a simple, clean design, and designed our website to be easy to use and easy to learn.
 
 ### [UI Prototype Link](https://www.figma.com/design/06Grid7QpstABdzwhMFVan/Midreads-Homepage?node-id=0-1&t=2CPF7OGMEoiFyQFE-1)
 
 #### Prototype last updated 12 May 2024
 
-#### _Development environment setup goes here_
+### Setting up your Development Environment
+1. Ensure that you have the latest version of `node` and `npm` installed on your machine
+2. Clone the repository
+3. Open your terminal and navigate to the root folder of the project
+4. Run `npm install` in the root folder to install all necessary dependencies and packages
+5. `cd` into the `/packages` folder
+6. Open a second terminal tab
+7. In the first tab, `cd` into `/express-backend` and run the command `npm run dev`
+8. In the second tab, `cd` into `/react-frontend` and run the command `npm run dev`
+9. Open the link that appears in the second tab after running the command
+10. You should now be running the Midreads platform locally
 
 ### [UML Wiki Page](https://github.com/JP-Duran/midreads/blob/main/docs/uml.md)
 
@@ -31,7 +43,7 @@ Please adhere to the following style guides:
 - [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
 - [BEM CSS Naming Conventions](http://getbem.com/naming/)
 
-### Setting Up Your Development Environment
+### Additional Development Environment Setup Instructions
 
 To ensure code quality and consistency, we recommend setting up the following IDE plugins:
 
@@ -87,9 +99,9 @@ npm run stylelint
 # Run Tests
 npm test
 ```
-
+  
 For the avid reader who wants a virtual library of their reading history, midreads is a website that allows readers to log their books they've read and want to read, rate the books they've read, and see what their friends are reading. Unlike GoodReads, our product is simple to use and doesn't sell user data.
-
+  
 **Julian Duran**
 As a new user I want to create an account so I can login later.  
 As a returning user I want to login to my account so I can access my data.  
