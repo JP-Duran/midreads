@@ -1,3 +1,4 @@
+import React from 'react';
 import "./generalHeader.css";
 const generalHeader = () => {
   return (
