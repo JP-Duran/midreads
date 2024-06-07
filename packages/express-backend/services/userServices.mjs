@@ -12,6 +12,10 @@ mongoose
   .then(() => console.log("Connected to MongoDB Atlas"))
   .catch((error) => console.error("Error connecting to MongoDB Atlas:", error));
 
+const disconnectFromDatabase = () => {
+  return mongoose.disconnect();
+};
+
 function addUser(user) {
   const userToAdd = new userModel(user);
   const promise = userToAdd.save();
@@ -24,14 +28,16 @@ function getUser(uid) {
 
 async function updateReadLater(uid, book) {
   let user = await userModel.findOne({ uid: uid });
-  console.log(user);
   if (user.booksToRead.includes(book._id)) {
     return undefined;
   } else {
-    return userModel.updateOne(
+    console.log("USER FOUND", user, book);
+    const newUser = userModel.updateOne(
       { uid: uid },
       { $push: { booksToRead: book._id } }
     );
+    console.log("UPDATE", newUser);
+    return newUser;
   }
 }
 
@@ -123,6 +129,10 @@ async function getFriends(friendIds) {
   return userModel.find({ _id: { $in: friendIds } });
 }
 
+async function removeUser(uid) {
+  return userModel.deleteOne({ uid: uid });
+}
+
 export default {
   addUser,
   getUser,
@@ -138,4 +148,6 @@ export default {
   updatePhoto,
   updateBio,
   getUserBio,
+  disconnectFromDatabase,
+  removeUser
 };

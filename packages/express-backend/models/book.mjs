@@ -24,6 +24,10 @@ const BookSchema = new mongoose.Schema(
       type: Number,
       required: false,
     },
+    isTest: {
+      type: String,
+      required: false,
+    }
   },
   { collection: "book_list_new" }
 );
