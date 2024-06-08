@@ -11,6 +11,10 @@ mongoose
   .then(() => console.log("Connected to MongoDB Atlas"))
   .catch((error) => console.error("Error connecting to MongoDB Atlas:", error));
 
+const disconnectFromDatabase = () => {
+  return mongoose.disconnect();
+};
+
 async function addBook(book) {
   const bookToAdd = new bookModel(book);
   const title = bookToAdd.title;
@@ -80,4 +84,5 @@ export default {
   addBook,
   findBooksWithSubstring,
   findCountOfBooksWithSubstring,
+  disconnectFromDatabase
 };

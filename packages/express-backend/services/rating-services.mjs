@@ -12,6 +12,10 @@ mongoose
   .then(() => console.log("Connected to MongoDB Atlas"))
   .catch((error) => console.error("Error connecting to MongoDB Atlas:", error));
 
+  const disconnectFromDatabase = () => {
+    return mongoose.disconnect();
+  };
+
 function addRating(rating) {
   addBookRating(rating.about, rating.rating);
   const ratingToAdd = new ratingModel(rating);
